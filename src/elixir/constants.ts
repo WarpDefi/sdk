@@ -3,11 +3,12 @@ import { ChainId } from '../chains'
 /**
  * The default factory enabled fee amounts, denominated in hundredths of bips.
  */
+
 export enum FeeAmount {
   LOWEST = 100,
   LOW = 500,
-  MEDIUM = 3000,
-  HIGH = 10000
+  MEDIUM = 2500,
+  HIGH = 8000
 }
 
 /**
@@ -20,7 +21,7 @@ export const TICK_SPACINGS: { [amount in FeeAmount]: number } = {
   [FeeAmount.HIGH]: 200
 }
 
-export const POOL_INIT_CODE_HASH = '0x41a723f9e6457830b1b7a44df4435fab88581d073226894b33131815dd674c22'
+export const POOL_INIT_CODE_HASH = '0xa9bb1321d78097b23af97a9c07d5ec13e1adc404334585171c54ecccb5ad93b2'
 
 export const POOL_INIT_CODE_HASH_MAPPING: { [chainId in ChainId]: string } = {
   [ChainId.FUJI]: POOL_INIT_CODE_HASH,

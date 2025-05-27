@@ -36,6 +36,7 @@ export class ElixirPool {
   public readonly token0: Token
   public readonly token1: Token
   public readonly fee: FeeAmount
+  public readonly initialFee: FeeAmount
   public readonly sqrtRatioX96: JSBI
   public readonly liquidity: JSBI
   public readonly tickCurrent: number
@@ -67,6 +68,7 @@ export class ElixirPool {
    * @param tokenA One of the tokens in the pool
    * @param tokenB The other token in the pool
    * @param fee The fee in hundredths of a bips of the input amount of every swap that is collected by the pool
+   * @param initialFee The initialFee in hundredths of a bips of the input amount of every swap that is collected by the pool
    * @param sqrtRatioX96 The sqrt of the current ratio of amounts of token1 to token0
    * @param liquidity The current value of in range liquidity
    * @param tickCurrent The current tick of the pool
@@ -76,6 +78,7 @@ export class ElixirPool {
     tokenA: Token,
     tokenB: Token,
     fee: FeeAmount,
+    initialFee: FeeAmount,
     sqrtRatioX96: BigintIsh,
     liquidity: BigintIsh,
     tickCurrent: number,
@@ -93,10 +96,11 @@ export class ElixirPool {
     // always create a copy of the list since we want the pool's tick list to be immutable
     ;[this.token0, this.token1] = tokenA.sortsBefore(tokenB) ? [tokenA, tokenB] : [tokenB, tokenA]
     this.fee = fee
+    this.initialFee = initialFee
     this.sqrtRatioX96 = JSBI.BigInt(sqrtRatioX96)
     this.liquidity = JSBI.BigInt(liquidity)
     this.tickCurrent = tickCurrent
-    this.tickDataProvider = Array.isArray(ticks) ? new TickListDataProvider(ticks, TICK_SPACINGS[fee]) : ticks
+    this.tickDataProvider = Array.isArray(ticks) ? new TickListDataProvider(ticks, TICK_SPACINGS[initialFee]) : ticks
   }
 
   /**
@@ -181,6 +185,7 @@ export class ElixirPool {
         this.token0,
         this.token1,
         this.fee,
+        this.initialFee,
         sqrtRatioX96,
         liquidity,
         tickCurrent,
@@ -215,6 +220,7 @@ export class ElixirPool {
         this.token0,
         this.token1,
         this.fee,
+        this.initialFee,
         sqrtRatioX96,
         liquidity,
         tickCurrent,
@@ -336,7 +342,7 @@ export class ElixirPool {
   }
 
   public get tickSpacing(): number {
-    return TICK_SPACINGS[this.fee]
+    return TICK_SPACINGS[this.initialFee]
   }
 }
 /* eslint-enable */

@@ -343,11 +343,11 @@ export const AVALANCHE_MAINNET: Chain = {
   supported_by_bridge: true,
   rpc_uri: 'https://api.avax.network/ext/bc/C/rpc',
   subgraph: {
-    exchange: 'https://gateway-arbitrum.network.thegraph.com/api/f2d0632512eab32ee18295ff38a272be/subgraphs/id/BoQbRerZRKwcvjGUXvq7s1MCHPenVtzonv1cVLhn1qe2',
+    exchange: 'https://gateway.thegraph.com/api/75b4f1fede4d0682187dd6a95a6212eb/subgraphs/id/CPXTDcwh6tVP88QvFWW7pdvZJsCN4hSnfMmYeF1sxCLq',
     blocks: 'https://api.studio.thegraph.com/query/59684/avalanche-pangolin-blocks/version/latest',
-    minichef: 'https://gateway-arbitrum.network.thegraph.com/api/f2d0632512eab32ee18295ff38a272be/subgraphs/id/BoQbRerZRKwcvjGUXvq7s1MCHPenVtzonv1cVLhn1qe2',
+    minichef: 'https://api.studio.thegraph.com/query/59684/avalanche-pangolin-v2/version/latest',
     governance: 'https://api.studio.thegraph.com/query/59684/avalan-pangolin-governor-alpha/version/latest',
-    elixir: 'https://api.studio.thegraph.com/query/59684/avalanche-pangolin-elixir/version/latest'
+    elixir: 'https://gateway.thegraph.com/api/75b4f1fede4d0682187dd6a95a6212eb/subgraphs/id/Fz7s5upsgHoM1mv3bxHMZkiAT6xtFXUyp5YXmHX5tq35'
   },
   coingecko_id: 'avalanche',
   debank_pangolin_id: 'avax_pangolin',
@@ -361,7 +361,7 @@ export const AVALANCHE_MAINNET: Chain = {
     community_treasury: '0x650f5865541f6D68BdDFE977dB933C293EA72358',
     treasury_vester: '0x6747AC215dAFfeE03a42F49FebB6ab448E12acEe',
     mini_chef: {
-      address: '0x1f806f7C8dED893fd3caE279191ad7Aa3798E928',
+      address: '0xA73B1887054F424F967A3644aC72826A989826DB',
       active: true,
       type: ChefType.MINI_CHEF_V2
     },
@@ -386,15 +386,15 @@ export const AVALANCHE_MAINNET: Chain = {
       }
     ],
     elixir: {
-      factory: '0x0bD438cB54153C5418E91547de862F21Bc143Ae2',
-      nftDescriptorLibrary: '0x39fe3D7B6064924B67Dd3da2e61A5c2fa7797e41',
-      nftDescriptor: '0xd6975C40F13E0f9586b3973DBbD7C11d0938056A',
-      nftManager: '0xb18a6cf6833130c7A13076D96c7e3784b7F721D1',
-      swapRouter: '0x71acb793a4D4E5F107D6F167c79484979146a543',
-      migrator: '0x57D58f22b3818c5e4bE8595324Eb2B0d8B3334af',
-      pangolinInterfaceMulticall: '0x46F2F4C35C9e31B45d70335913eb4538079506E6',
-      quoterV2: '0x97Addf65d4b220747B98Cb27356869fD59F39B0C',
-      tickLens: '0x575D15c38895fc0326648e44CaA0CF4f2245642D'
+      factory: '0x1128F23D0bc0A8396E9FBC3c0c68f5EA228B8256',
+      nftDescriptorLibrary: '0xB87a8aD1c1217EC587474b348b848dF564D505aa',
+      nftDescriptor: '0x7528B8Ae60084577B0774A4e225BC4C3DeA7E315',
+      nftManager: '0xf40937279F38D0c1f97aFA5919F1cB3cB7f06A7F',
+      swapRouter: '0x5485A0751a249225D3bA2f6f296551507e22547f',
+      migrator: '0x27eCB0391ad611Bbd9dd5e7e8A19db3fCAe41ab8',
+      pangolinInterfaceMulticall: '0x7d115C1fb6152C5Aed1750183Ae59107160694a2',
+      quoterV2: '0xA86522CCc412dBC4FA10991900FE46De95983822',
+      tickLens: '0x5DFe6DB0F904A27a52f543Afd6B690784a44CaC1'
     }
   },
   nativeCurrency: {
@@ -421,7 +421,7 @@ export const AVALANCHE_FUJI: Chain = {
   supported_by_bridge: false,
   rpc_uri: 'https://api.avax-test.network/ext/bc/C/rpc',
   subgraph: {
-    elixir: 'https://graph-avalanche.pangolin.network/subgraphs/name/fuji/pangolin-elixir'
+    elixir: 'https://api.studio.thegraph.com/query/59684/fuji-pangolin-elixir/version/latest'
   },
   contracts: {
     png: '0xAF5D473b3f8F96A5B21c6bbB97e09b491335acb9',
@@ -454,15 +454,15 @@ export const AVALANCHE_FUJI: Chain = {
       }
     ],
     elixir: {
-      factory: '0xAF0F49F7E8084223737a5981A5f5a11101c6E406',
-      nftDescriptorLibrary: '0x08bd698104224EC04f1b156791B481A7f9f5bB4F',
-      nftDescriptor: '0xE1bC64dAD2ED7609CBfBEd292403Bc1D0B597F43',
-      nftManager: '0x6d89F74Cf03bFd8D2bf623c621af9CC6464E2C0a',
-      swapRouter: '0x2F880EE1eed628959cCA85fC58C79D5d9BCb84ae',
-      migrator: '0x418554Ce1e27C251fAfBd85a7Ff688B7cb06b46a',
-      pangolinInterfaceMulticall: '0xBaD101Fc63d545d38A28F03D69B111f921B8D08a',
-      quoterV2: '0xBA67c6E54303b844471F21b6828D07A929181141',
-      tickLens: '0xE3a6103D8A70253CB5aEfe1746DE50e9771efD52'
+      factory: '0xa2C8Cc50C82C9CA44470869f2214cf48a0c45F6b',
+      nftDescriptorLibrary: '0x27be1406540392a4d4ff1cfDf0bdB211676c3efa',
+      nftDescriptor: '0xE63b2C046fb4cd38E4a0fD8Cb5a700FD878B7392',
+      nftManager: '0xffb8250c9cE730cC84B40cBdAce2FF7DFA8e6ef9',
+      swapRouter: '0x1d5A17D62c68A09A0F8FBa7d585Ce6AA99CB60Dd',
+      migrator: '0xC50f7aD420E2c273Eaf9A6BCD90C3Df6295a3570',
+      pangolinInterfaceMulticall: '0x7CadfB320dFF982a65F8Ab15E4D0AC27d666873C',
+      quoterV2: '0x45c3Dc3728D0EA76d77D89Fe7a649dd77eD26d63',
+      tickLens: '0x9573A023DE6A9f22BA67D2A1C3B029f5f93fF19f'
     }
   },
   nativeCurrency: {
@@ -841,7 +841,7 @@ export const EVMOS_MAINNET: Chain = {
   supported_by_gelato: false,
   supported_by_twap: false,
   supported_by_bridge: false,
-  rpc_uri: 'https://eth.bd.evmos.org:8545',
+  rpc_uri: 'https://evmos.lava.build',
   subgraph: {
     exchange: 'https://graph-evmos-main.pangolin.network/subgraphs/name/evmos/pangolin-v2',
     elixir: 'https://graph-evmos-main.pangolin.network/subgraphs/name/evmos/pangolin-elixir'
@@ -1403,14 +1403,14 @@ export const HEDERA_MAINNET: Chain = {
   supported_by_gelato: false,
   supported_by_twap: false,
   supported_by_bridge: false,
-  rpc_uri: 'https://hedera-mainnet-rpc.pangolin.network',
+  rpc_uri: 'https://mainnet.hashio.io/api',
   png_symbol: 'PBAR',
   logo: 'https://raw.githubusercontent.com/pangolindex/sdk/master/src/images/chains/hedera.png',
   subgraph: {
-    exchange: 'https://graph-hedera-main.pangolin.network/subgraphs/name/pangolin',
+    exchange: 'https://graph-hedera-pangolin.canary.exchange/subgraphs/name/pangolin',
     blocks: 'https://graph-hedera-main.pangolin.network/subgraphs/name/blocks',
-    pangochef: 'https://graph-hedera-main.pangolin.network/subgraphs/name/pangolin',
-    singleStaking: 'https://graph-hedera-main.pangolin.network/subgraphs/name/pangolin',
+    pangochef: 'https://graph-hedera-pangolin.canary.exchange/subgraphs/name/pangolin',
+    singleStaking: 'https://graph-hedera-pangolin.canary.exchange/subgraphs/name/pangolin',
     governance: 'https://graph-hedera-main.pangolin.network/subgraphs/name/governor'
   },
   contracts: {
@@ -1638,7 +1638,7 @@ export const SONGBIRD_CANARY: Chain = {
   supported_by_gelato: false,
   supported_by_twap: false,
   supported_by_bridge: false,
-  rpc_uri: 'https://sgb.ftso.com.au/ext/bc/C/rpc',
+  rpc_uri: 'https://songbird-api.flare.network/ext/bc/C/rpc',
   subgraph: {
     governance: 'https://flare.pangolin.network/subgraphs/name/songbird/governorPango'
   },

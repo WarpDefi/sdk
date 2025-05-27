@@ -179,7 +179,7 @@ export abstract class NonfungiblePositionManager {
     return NonfungiblePositionManager.INTERFACE.encodeFunctionData('createAndInitializePoolIfNecessary', [
       pool.token0.address,
       pool.token1.address,
-      pool.fee,
+      pool.initialFee,
       toHex(pool.sqrtRatioX96)
     ])
   }
@@ -228,7 +228,7 @@ export abstract class NonfungiblePositionManager {
           {
             token0: position.pool.token0.address,
             token1: position.pool.token1.address,
-            fee: position.pool.fee,
+            fee: position.pool.initialFee,
             tickLower: position.tickLower,
             tickUpper: position.tickUpper,
             amount0Desired: toHex(amount0Desired),

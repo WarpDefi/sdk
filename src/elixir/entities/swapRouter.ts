@@ -133,7 +133,7 @@ export abstract class SwapRouter {
             const exactInputSingleParams = {
               tokenIn: route.path[0].address,
               tokenOut: route.path[1].address,
-              fee: route.pools[0].fee,
+              fee: route.pools[0].initialFee,
               recipient: routerMustCustody ? ZERO_ADDRESS : recipient,
               deadline,
               amountIn,
@@ -146,7 +146,7 @@ export abstract class SwapRouter {
             const exactOutputSingleParams = {
               tokenIn: route.path[0].address,
               tokenOut: route.path[1].address,
-              fee: route.pools[0].fee,
+              fee: route.pools[0].initialFee,
               recipient: routerMustCustody ? ZERO_ADDRESS : recipient,
               deadline,
               amountOut,
