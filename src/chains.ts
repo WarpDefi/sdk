@@ -27,6 +27,7 @@ export enum ChainId {
   COSTON2 = 114,
   EVMOS_TESTNET = 9000,
   EVMOS_MAINNET = 9001,
+  INKCHAIN_SEPOLIA = 763373,
   SKALE_BELLATRIX_TESTNET = 1351057110
 }
 
@@ -405,7 +406,81 @@ export const AVALANCHE_MAINNET: Chain = {
   blockExplorerUrls: ['https://snowtrace.io'],
   network_type: NetworkType.EVM
 }
-
+export const INKCHAIN_SEPOLIA: Chain = {
+  id: 'inkchain_sepolia',
+  chain_id: 763373,
+  name: 'Inkchain Sepolia',
+  symbol: 'ETH',
+  mainnet: false,
+  logo: 'https://explorer-sepolia.inkonchain.com/assets/configs/network_logo.svg',
+  pangolin_is_live: true,
+  tracked_by_debank: false,
+  supported_by_gelato: false,
+  supported_by_twap: false,
+  supported_by_bridge: false,
+  rpc_uri: 'https://rpc-gel-sepolia.inkonchain.com',
+    subgraph: {
+    exchange: 'https://gateway.thegraph.com/api/75b4f1fede4d0682187dd6a95a6212eb/subgraphs/id/CPXTDcwh6tVP88QvFWW7pdvZJsCN4hSnfMmYeF1sxCLq',
+    blocks: 'https://api.studio.thegraph.com/query/59684/avalanche-pangolin-blocks/version/latest',
+    minichef: 'https://api.studio.thegraph.com/query/59684/avalanche-pangolin-v2/version/latest',
+    governance: 'https://api.studio.thegraph.com/query/59684/avalan-pangolin-governor-alpha/version/latest',
+    elixir: 'https://gateway.thegraph.com/api/75b4f1fede4d0682187dd6a95a6212eb/subgraphs/id/Fz7s5upsgHoM1mv3bxHMZkiAT6xtFXUyp5YXmHX5tq35'
+  },
+  coingecko_id: 'ink',
+  contracts: {
+    png: '0x68ae24AA6E88Aec4D4fDBc205B653924A87C0879',
+    factory: '0xeBdFb0147b916CD0b79e10c754e9B081c8713A55',
+    router: '0x599cdBb1Ac705A86077345C52e69064De3b02de8',
+    router_daas: '0x599cdBb1Ac705A86077345C52e69064De3b02de8',
+    wrapped_native_token: '0x4200000000000000000000000000000000000006',
+    local_multisig: '0x8a3B60cd618798632F892daF2848a13E0A245dc4',
+    community_treasury: '0xce3DbE71F9216Ebba567f0A7B511dABBDCB3dC14',
+    treasury_vester: '0x0F817EAe5AFBa18e2cbBAa4b4502cD0a3D218E20',
+    mini_chef: {
+      address: '0x2d684088459cf39133d9A70070D85E42c9372749',
+      active: false,
+      type: ChefType.MINI_CHEF_V2
+    },
+    airdrop: {
+      address: '0x0C58C2041da4CfCcF5818Bbe3b66DBC23B3902d9',
+      active: false,
+      type: AirdropType.LEGACY
+    },
+    timelock: '0x4248daB9eeC169e87E45e86ecf0c4C3f776A3145',
+    governor: {
+      address: '0xb0Ff2b1047d9E8d294c2eD798faE3fA817F43Ee1',
+      type: GovernanceType.STANDARD
+    },
+    migrator: '0x4b23Aa72A1214d0E4fd3f2c8Da7C6ba660F7483C',
+    multicall: '0x0FB54156B496b5a040b51A71817aED9e2927912E',
+    staking: [
+      {
+        address: '0x88afdaE1a9F58Da3E68584421937E5F564A0135b',
+        active: false,
+        reward_token: '0x68ae24AA6E88Aec4D4fDBc205B653924A87C0879',
+        type: StakingType.LEGACY
+      }
+    ],
+    elixir: {
+      factory: '0xe87379Da6E4b71278df5FF5Cac5309e40F249F02',
+      nftDescriptorLibrary: '0xB87a8aD1c1217EC587474b348b848dF564D505aa',
+      nftDescriptor: '0x13C1AF9EB45E44f1750023D30E282b981348573b',
+      nftManager: '0xf40937279F38D0c1f97aFA5919F1cB3cB7f06A7F',
+      swapRouter: '0xF13F29c41097E2552c474eAF4Bb6729158A6b786',
+      migrator: '0x95DdD521865d4A3Ee39c3ffc3176A4948b452543',
+      pangolinInterfaceMulticall: '0xb3B56Ee575319a234F8A5d60149c038dF7bD7b32',
+      quoterV2: '0xcE09e46aC0C1B7a2451eB6b178a473fAA92C9202',
+      tickLens: '0x41822FADb2fa0981452b63d857183B236018fF7D'
+    }
+  },
+  nativeCurrency: {
+    name: 'Ether',
+    symbol: 'ETH',
+    decimals: 18
+  },
+  blockExplorerUrls: ['https://explorer-sepolia.inkonchain.com'],
+  network_type: NetworkType.EVM
+}
 export const AVALANCHE_FUJI: Chain = {
   id: 'avalanche_fuji',
   chain_id: 43113,
