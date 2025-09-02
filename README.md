@@ -1,5 +1,5 @@
-# Pangolin SDK
-This repo contains tools for developing with [Pangolin](pangolin.exchange).
+# WarpDefi SDK
+This repo contains tools for developing with [WarpDefi](http://warpdefi.com).
 
 ## Running
 This project uses standard npm and yarn workflows.

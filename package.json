@@ -8,10 +8,10 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/pangolindex/sdk",
+  "repository": "https://github.com/WarpDefi/sdk",
   "keywords": [
-    "pangolin",
-    "avalanche"
+    "warpdefi",
+    "inkonchain"
   ],
   "module": "dist/sdk.esm.js",
   "scripts": {
