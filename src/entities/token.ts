@@ -91,6 +91,13 @@ export const WAVAX: { [chainId in ChainId]: Token } = {
     'WCFLR',
     'Wrapped CostonFlare'
   ),
+  [ChainId.INKCHAIN_SEPOLIA]: new Token(
+    ChainId.INKCHAIN_SEPOLIA,
+    CHAINS[ChainId.INKCHAIN_SEPOLIA].contracts!.wrapped_native_token,
+    18,
+    'WETH',
+    'Wrapped ETH'
+  ),
   [ChainId.SONGBIRD]: new Token(
     ChainId.SONGBIRD,
     CHAINS[ChainId.SONGBIRD].contracts!.wrapped_native_token,
