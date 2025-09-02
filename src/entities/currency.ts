@@ -21,6 +21,7 @@ export class Currency {
   public static readonly CURRENCY: { [chainId in ChainId]: Currency } = {
     [ChainId.FUJI]: new Currency(18, CHAINS[ChainId.FUJI].symbol, CHAINS[ChainId.FUJI].name),
     [ChainId.AVALANCHE]: new Currency(18, CHAINS[ChainId.AVALANCHE].symbol, CHAINS[ChainId.AVALANCHE].name),
+    [ChainId.INKCHAIN_SEPOLIA]: new Currency(18, CHAINS[ChainId.INKCHAIN_SEPOLIA].symbol, CHAINS[ChainId.INKCHAIN_SEPOLIA].name),
     [ChainId.WAGMI]: new Currency(18, CHAINS[ChainId.WAGMI].symbol, CHAINS[ChainId.WAGMI].name),
     [ChainId.COSTON]: new Currency(18, CHAINS[ChainId.COSTON].symbol, CHAINS[ChainId.COSTON].name),
     [ChainId.SONGBIRD]: new Currency(18, CHAINS[ChainId.SONGBIRD].symbol, CHAINS[ChainId.SONGBIRD].name),
