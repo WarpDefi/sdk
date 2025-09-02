@@ -26,6 +26,7 @@ export const POOL_INIT_CODE_HASH = '0xa9bb1321d78097b23af97a9c07d5ec13e1adc40433
 export const POOL_INIT_CODE_HASH_MAPPING: { [chainId in ChainId]: string } = {
   [ChainId.FUJI]: POOL_INIT_CODE_HASH,
   [ChainId.AVALANCHE]: POOL_INIT_CODE_HASH,
+  [ChainId.INKCHAIN_SEPOLIA]: '',
   [ChainId.WAGMI]: '',
   [ChainId.COSTON]: '',
   [ChainId.SONGBIRD]: '',
